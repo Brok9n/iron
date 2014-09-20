@@ -22,3 +22,18 @@ bool cItem::isValid()
 	
 	return false;
 }
+
+void cItem::setItem(item_type_t iType, char* sName, double fBonus)
+{
+	if (iType != item_none)
+	{
+		if (mName)
+			delete[] mName;
+		
+		mName = new char[strlen(sName) + 1];
+		strncpy(mName, sName, strlen(sName) + 1);
+		
+		mType	= iType;
+		mBonus	= fBonus;
+	}
+}
