@@ -10,9 +10,9 @@ class cBase {
 	private:
 		char* mName;
 		
-		double mHealth;
-		double mArmor;
-		double mAttack;
+		double	mHealth,
+			mArmor,
+			mAttack;
 	protected:
 		void setName(const char* sName);
 		void setHealth(double fHealth);
