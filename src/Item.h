@@ -4,7 +4,9 @@
 #include <string.h>
 
 typedef enum {
-	item_weapon, item_armor
+	item_none,
+	item_weapon,
+	item_armor
 } item_type_t;
 
 class cItem {
@@ -14,8 +16,9 @@ class cItem {
 		
 		double mBonus;
 	public:
-		cItem(){};
+		cItem(){ mType=item_none; };
 		cItem(const char* sName, item_type_t iType, double fBonus);
+		
 		~cItem();
 		
 		bool isValid();
