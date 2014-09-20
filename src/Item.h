@@ -6,7 +6,8 @@
 typedef enum {
 	item_none,
 	item_weapon,
-	item_armor
+	item_armor,
+	item_potion
 } item_type_t;
 
 class cItem {
@@ -16,7 +17,7 @@ class cItem {
 		
 		double mBonus;
 	public:
-		cItem(){ mType=item_none; };
+		cItem(){ mName=0; mType=item_none; };
 		cItem(const char* sName, item_type_t iType, double fBonus);
 		
 		~cItem();
