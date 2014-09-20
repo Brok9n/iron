@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "Item.h"
+
 class cBase {
 	private:
 		char* mName;

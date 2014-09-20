@@ -12,6 +12,6 @@ cBase::cBase(const char* sName, double fHealth, double fArmor, double fAttack)
 
 cBase::~cBase()
 {
-	if (mName)
-		delete[] mName;
+	if (this->mName)
+		delete[] this->mName;
 }
