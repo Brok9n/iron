@@ -12,6 +12,11 @@ class cHero : public cBase {
 			mArmor;
 	public:
 		void updateStats();
+		
+		bool haveWeapon();
+		bool haveArmor();
+		
+		void giveItem(cItem iItem);
 };
 
 #endif
