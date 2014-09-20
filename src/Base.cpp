@@ -9,3 +9,9 @@ cBase::cBase(const char* sName, double fHealth, double fArmor, double fAttack)
 	this->mArmor	= fArmor;
 	this->mAttack	= fAttack;
 }
+
+cBase::~cBase()
+{
+	if (mName)
+		delete[] mName;
+}

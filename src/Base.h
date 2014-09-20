@@ -19,7 +19,7 @@ class cBase {
 	public:
 		cBase(){};
 		cBase(const char* sName, double fHealth, double fArmor, double fAttack);
-		~cBase(){};
+		~cBase();
 		
 		char* getName(void) { return this->mName; };
 		
