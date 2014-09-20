@@ -30,23 +30,13 @@ bool cHero::haveArmor()
 
 void cHero::giveItem(cItem iItem)
 {
-	if (iItem.getType() == item_weapon)
+	if (iItem.getType() == item_weapon && mWeapon.getType() != item_armor)
 	{
-		if (mWeapon.getType() == item_none)
-		{
-		}
-		else if (mWeapon.getType() == item_weapon)
-		{
-		}
+		mWeapon.setItem(iItem.getType(), iItem.getName(), iItem.getBonus());
 	}
-	else if (iItem.getType() == item_armor)
+	else if (iItem.getType() == item_armor && mArmor.getType() != item_weapon)
 	{
-		if (mArmor.getType() == item_none)
-		{
-		}
-		else if (mArmor.getType() == item_armor)
-		{
-		}
+		mArmor.setItem(iItem.getType(), iItem.getName(), iItem.getBonus());
 	}
 }
 
