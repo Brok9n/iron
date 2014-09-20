@@ -10,8 +10,8 @@ class cHero : public cBase {
 	private:
 		cItem	mWeapon,
 			mArmor;
-		
 	public:
+		void updateStats();
 };
 
 #endif

@@ -15,3 +15,13 @@ cBase::~cBase()
 	if (this->mName)
 		delete[] this->mName;
 }
+
+void cBase::setName(const char* sName)
+{
+	if (this->mName)
+		delete[] this->mName;
+	
+	this->mName = new char[strlen(sName) + 1];
+	strncpy(this->mName, sName, strlen(sName) + 1);
+}
+

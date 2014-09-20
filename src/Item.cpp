@@ -14,3 +14,11 @@ cItem::~cItem()
 	if (this->mName)
 		delete[] this->mName;
 }
+
+bool cItem::isValid()
+{
+	if (this->mType == item_weapon || this->mType == item_armor)
+		return true;
+	
+	return false;
+}

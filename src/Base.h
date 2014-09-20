@@ -7,17 +7,17 @@
 #include "Item.h"
 
 class cBase {
-	private:
+	protected:
 		char* mName;
 		
 		double	mHealth,
 			mArmor,
 			mAttack;
-	protected:
+		
 		void setName(const char* sName);
-		void setHealth(double fHealth);
-		void setArmor(double fArmor);
-		void setAttack(double fAttack);
+		void setHealth(double fHealth) { this->mHealth = fHealth; };
+		void setArmor(double fArmor) { this->mArmor = fArmor; };
+		void setAttack(double fAttack) { this->mAttack = fAttack; };
 	public:
 		cBase(){};
 		cBase(const char* sName, double fHealth, double fArmor, double fAttack);
