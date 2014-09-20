@@ -1,10 +1,12 @@
-#include <iostream>
+#include <stdio.h>
 
-int main()
+#include "Hero.h"
+
+int
+main(void)
 {
-	using namespace std;
-	
-	cout << "Hello World\n";
+	cHero TheChosenOne("The Chosen One", 10.0, 5.0, 5.0);
 	
 	return 0;
 }
+
