@@ -2,6 +2,7 @@
 #define BASE_h
 
 #include <stdio.h>
+#include <string.h>
 
 class cBase {
 	private:
@@ -11,23 +12,20 @@ class cBase {
 		double mArmor;
 		double mAttack;
 	protected:
-		void set_Name(const char* sName);
-		void set_Health(double fHealth);
-		void set_Armor(double fArmor);
-		void set_Attack(double fAttack);
+		void setName(const char* sName);
+		void setHealth(double fHealth);
+		void setArmor(double fArmor);
+		void setAttack(double fAttack);
 	public:
 		cBase(){};
-		cBase(const char* mName, double fHealth, double fArmor, double fAttack)
-		{
-			printf("%s\n%lf\n%lf\n%lf\n", mName, fHealth, fArmor, fAttack);
-		}
+		cBase(const char* sName, double fHealth, double fArmor, double fAttack);
 		~cBase(){};
 		
-		char* get_Name(void) { return this->mName; };
+		char* getName(void) { return this->mName; };
 		
-		double get_Health(void) { return this->mHealth; };
-		double get_Armor(void) { return this->mArmor; };
-		double get_Attack(void) { return this->mAttack; };
+		double getHealth(void) { return this->mHealth; };
+		double getArmor(void) { return this->mArmor; };
+		double getAttack(void) { return this->mAttack; };
 };
 
 #endif
