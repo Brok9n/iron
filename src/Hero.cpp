@@ -32,11 +32,11 @@ void cHero::giveItem(cItem iItem)
 {
 	if (iItem.getType() == item_weapon && mWeapon.getType() != item_armor)
 	{
-		mWeapon.setItem(iItem.getType(), iItem.getName(), iItem.getBonus());
+		mWeapon.setItem(iItem.getName(), iItem.getType(), iItem.getBonus());
 	}
 	else if (iItem.getType() == item_armor && mArmor.getType() != item_weapon)
 	{
-		mArmor.setItem(iItem.getType(), iItem.getName(), iItem.getBonus());
+		mArmor.setItem(iItem.getName(), iItem.getType(), iItem.getBonus());
 	}
 }
 

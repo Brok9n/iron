@@ -17,6 +17,9 @@ class cHero : public cBase {
 		bool haveArmor();
 		
 		void giveItem(cItem iItem);
+		
+		char* getWeaponName() { return mWeapon.getName(); };
+		char* getArmorName() { return mArmor.getName(); };
 };
 
 #endif

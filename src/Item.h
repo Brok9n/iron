@@ -28,7 +28,7 @@ class cItem {
 		item_type_t getType() { return this->mType; };
 		double getBonus() { return this->mBonus; };
 		
-		void setItem(item_type_t iType, char* sName, double fBonus);
+		void setItem(const char* sName, item_type_t iType, double fBonus);
 };
 
 #endif
